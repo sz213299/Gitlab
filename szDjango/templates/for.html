@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for语句</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>名称</th>
+        <th>作者</th>
+    </tr>
+    </thead>
+
+
+    <tbody>
+    {% for book in books %}
+        <tr>
+            <td>{{ forloop.counter0 }}</td>
+            <td>{{ book.name }}</td>
+            <td>{{ book.auther }}</td>
+        </tr>
+        {% empty %}
+        <tr>没有任何图书</tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div>
+    {% for key ,value in person.items %}
+        <p> {{ key }}:{{ value }}</p>
+    
+    {% endfor %}
+</div>
+
+
+
+</body>
+</html>

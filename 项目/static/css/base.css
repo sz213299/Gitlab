@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.rounded-circle {
+    width: 30px;  /* 设置图片宽度 */
+    height: 30px; /* 设置图片高度 */
+    object-fit: cover; /* 保持图片的宽高比 */
+  }
+.text{
+    font-size: 30px;
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	首页
+{% endblock %}
+
+
+
+
+
+{% block head %}
+	<style>
+    body{
+        background-color: aqua;
+    }
+    </style>
+{% endblock %}
+
+
+
+
+
+{% block body %}
+    {{ block.super }}
+	{%  include 'rmwz.html' %}
+    <div> ertyuio</div>
+{% endblock %}
