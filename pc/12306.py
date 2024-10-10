@@ -176,7 +176,6 @@ for i in result:
         no_seat,
     ])
     page += 1
-
 print(tb)
 page_num = input('请输入你要购买车次序号: ')
 Buy(FromCity=from_city, ToCity=to_city, Date=train_date, Num=page_num)
