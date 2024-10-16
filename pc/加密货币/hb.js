@@ -17,7 +17,7 @@ var eN = function (t) {
         r += String.fromCharCode.apply(null, n.slice(e * i, (e + 1) * i));
     return decodeURIComponent(escape(r += String.fromCharCode.apply(null, n.slice(e * i))))
 }
-// t = 'NaYHai6PCTwyS1vWrJYZY15NK3HXffLJeIiGLEbvxGdumsQsv4ltJ/GShEtXYwwMtrOeiV/PfI8vQuSZZpMt00D6RcnxrFuv9ikdU0iTcO21lKTbZ/m0LpPnTCw2ABnCaVJ4DAyMR8G/HUShMG+BwiYG2rHU4m0JIjLbyREHlMyAsgI3U0kdwKM8p4JAbqXTpyVGtZSjcrI6qYZYQ0ybrEdDnm7z6o4qBzFyGDDbbWo='
+t = 'NaYHai6PCTwyS1vWrJYZY15NK3HXffLJeIiGLEbvxGdumsQsv4ltJ/GShEtXYwwMtrOeiV/PfI8vQuSZZpMt00D6RcnxrFuv9ikdU0iTcO21lKTbZ/m0LpPnTCw2ABnCaVJ4DAyMR8G/HUShMG+BwiYG2rHU4m0JIjLbyREHlMyAsgI3U0kdwKM8p4JAbqXTpyVGtZSjcrI6qYZYQ0ybrEdDnm7z6o4qBzFyGDDbbWo='
 
 // 假设 eN 和 eR 已经被正确定义和引入
 function decryptData(t) {
@@ -30,5 +30,5 @@ function decryptData(t) {
 }
 
 // 测试输出
-// console.log(decryptData(t)); // 用你的加密数据替换
+console.log(decryptData(t)); // 用你的加密数据替换
 

@@ -18,10 +18,15 @@ cookies = {
     "acw_tc": "b4a3921517286306163953503ee19de99c9afbbda3b67b2b4ec149c80b",
     ".ciyuandao.pass.antiforgery": "CfDJ8PaXm6KUSvRHhZel3GxIeRbvGekSMK3aDf3_Y3Qw-otMSYA-GLb2MxwS0BZGU7n9ws96PcZW1T49XBMwx_DbhQu9KKZLZdjryzBZnMpnTus9Px0heFS2T7pc8uFB0mTZy6031ZxN5x19PnvzwP07toM"
 }
+# cookies = {
+#     ".ciyuandao.pass.antiforgery": "CfDJ8MZQFyUZy1lMgDZIIjMWjYOfKRN7TzeOaVjRM32fIPCRby-eYMSXhYlT0nY-xDNbOeuUAa6ywDummoKTuws3rjkE-MLeCDfclubdu48ipjH5Fw1A5jhkXhG3PmPj7t7J07gSESecj7_hn94i4bPHHVs",
+#     "acw_tc": "b4a3921e17290514213332765e51c3b8c4ee7359b5c675897c7177770b"
+# }
+
 for i in range(1, 485):
     print(f'——————开始第{i}页————————')
     url = f"http://ciyuandao.com/photo/list/0-0-{i}"
-    response = requests.get(url, headers=headers, verify=False)  # verify=False 跳过验证
+    response = requests.get(url, headers=headers, verify=False, timeout=4)  # verify=False 跳过验证
 
     Html = response.text
     text = html.unescape(Html)

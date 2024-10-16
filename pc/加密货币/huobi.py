@@ -1,12 +1,14 @@
-import json
-
 import requests
-import execjs
+
+PROXY = {
+    "http": "http://36.158.107.38:8085",  # 示例端口
+    "https": "http://36.158.107.38:8085"  # 示例端口
+}
 
 headers = {
     "accept": "application/json",
     "accept-language": "zh-CN,zh;q=0.9",
-    "cache-ts": "1728728867128",
+    "cache-ts": "1728800402750",
     "encryption": "true",
     "language": "zh",
     "origin": "https://www.coinglass.com",
@@ -24,8 +26,7 @@ url = "https://capi.coinglass.com/api/openInterest/info"
 params = {
     "symbol": "ETH"
 }
-response = requests.get(url, headers=headers, params=params)
-data = json.loads(response.text)['data']
-print(data)
-text = execjs.compile(open('./hb.js', 'r', encoding='utf-8').read()).call('decryptData', data)
-print(text)
+response = requests.get(url, headers=headers, params=params, proxies=PROXY)
+
+print(response.text)
+print(response)
