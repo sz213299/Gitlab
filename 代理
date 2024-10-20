@@ -1,1 +1,30 @@
 PROXY = "http://172.16.24.25:7001"
+对称加密算法  ：
+key（密钥）
+iv （初始向量）
+mode（加密模式）
+padding（填充方法）
+
+消息加密算法
+
+
+
+
+
+
+
+
+
+
+
+
+根据密钥的长度
+AES 64 128 192 256
+
+
+DES  56
+
+
+const CryptoJS = require('crypto-js')  算法包
+
+AES.decrypt
